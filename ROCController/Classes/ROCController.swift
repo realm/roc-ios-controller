@@ -6,4 +6,9 @@
 //
 //
 
-import Foundation
+import UIKit
+import Chatto
+
+open class ROCBaseController: BaseChatViewController {
+    
+}

@@ -11,10 +11,8 @@ Pod::Spec.new do |s|
   s.version          = '0.1.0'
   s.summary          = 'Realm Object Chat Controller. A powerful Chatto controller backed by Realm!'
 
-Creating a chat app is insanely hard. Not only the UI but also the data layer. With Realm's fast database and change notification API, we can show blazing fast, 60fps chats that you can easily integrate into your own app.
-
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Creating a chat app is insanely hard. Not only the UI but also the data layer. With Realm's fast database and change notification API, we can show blazing fast, 60fps chats that you can easily integrate into your own app.
                        DESC
 
   s.homepage         = 'https://github.com/mbalex99/ROCController'
@@ -34,6 +32,7 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
+  s.dependency 'RealmSwift', '~> 2.4.4'
   s.dependency 'Chatto', '~> 3.0.1'
   s.dependency 'ChattoAdditions', '~> 3.0.1'
 end
