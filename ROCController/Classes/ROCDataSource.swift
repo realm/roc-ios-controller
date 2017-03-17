@@ -41,7 +41,9 @@ open class ROCDataSource<T: ROCBaseChatMessage>: ChatDataSourceProtocol {
         }
     }
     
-    
+    public func reload(){
+        self.delegate?.chatDataSourceDidUpdate(self, updateType: .reload)
+    }
     
     deinit {
         token?.stop()

@@ -113,7 +113,7 @@
 		3CBA0D661083977692C62B3BEAF536C4 /* RLMSyncConfiguration.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = B68915CD49BE4ACC06053497CC09A86F /* RLMSyncConfiguration.h */; };
 		3CD251DF5C10FAFBE89BAB1FF4C2C2DE /* results_notifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AE7018437D1358593177A7F241DC453 /* results_notifier.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.4\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		3CDC0C290E647FBCBEED3AC079DF5084 /* RLMObservation.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4FA4D52BA417C71231613A0DAB6D3AE /* RLMObservation.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.4\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
-		3DD17E9DE529C5B20F7528CDC7A26C09 /* ROCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5321C6F29C1643486EB33E1BC22AF96E /* ROCController.swift */; };
+		3DD17E9DE529C5B20F7528CDC7A26C09 /* ROCBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5321C6F29C1643486EB33E1BC22AF96E /* ROCBaseController.swift */; };
 		3E3B514938FEE108F67BFCCFB58FE7EF /* list_notifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9ACED2F1558C01D1762819954A3080E /* list_notifier.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.4\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		3EF04CF9A1674D9DC228F127FD6CEB0E /* RLMObjectBase_Dynamic.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DD53EE273CEA7254D27861D506EEC4F /* RLMObjectBase_Dynamic.h */; };
 		409A3ECDDC680D0BD343E3F203862E25 /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = D9A07E69DA5B9BF6155B9DF835217AA6 /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -795,7 +795,7 @@
 		4E04A2FFB21A6D331785305ED24AD3AF /* PostNotification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PostNotification.swift; path = Sources/Nimble/Matchers/PostNotification.swift; sourceTree = "<group>"; };
 		4F8A0512434BDC45C8502019CFECD764 /* RLMRealm_Dynamic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMRealm_Dynamic.h; path = include/RLMRealm_Dynamic.h; sourceTree = "<group>"; };
 		510B954C7D830A5E378703EC3E57B3BE /* sync_session.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = sync_session.cpp; path = Realm/ObjectStore/src/sync/sync_session.cpp; sourceTree = "<group>"; };
-		5321C6F29C1643486EB33E1BC22AF96E /* ROCController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ROCController.swift; sourceTree = "<group>"; };
+		5321C6F29C1643486EB33E1BC22AF96E /* ROCBaseController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ROCBaseController.swift; sourceTree = "<group>"; };
 		532ACF78CD432CA52DC13B7B44E92535 /* Pods_ROCController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ROCController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5333B327A6DEF4B4F25BBB64FB118913 /* RLMOptionalBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMOptionalBase.h; path = include/RLMOptionalBase.h; sourceTree = "<group>"; };
 		546FFBF565AA0C3B16488A85BB999C20 /* CurrentTestCaseTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CurrentTestCaseTracker.h; path = Sources/NimbleObjectiveC/CurrentTestCaseTracker.h; sourceTree = "<group>"; };
@@ -1239,7 +1239,7 @@
 			isa = PBXGroup;
 			children = (
 				E39CC7591E7C83780073555E /* TextMessages */,
-				5321C6F29C1643486EB33E1BC22AF96E /* ROCController.swift */,
+				5321C6F29C1643486EB33E1BC22AF96E /* ROCBaseController.swift */,
 				E33941211E7C79FC005DF69B /* ROCDataSource.swift */,
 				E33941231E7C7AEC005DF69B /* ROCBaseChatMessage.swift */,
 				E39CC7611E7C88100073555E /* ROCMessageModelProtocol.swift */,
@@ -2676,7 +2676,7 @@
 				E33941221E7C79FC005DF69B /* ROCDataSource.swift in Sources */,
 				989A614ADE2BCE6E1C9B6ADFD41B2BCB /* ROCController-dummy.m in Sources */,
 				E39CC75E1E7C83A80073555E /* ROCTextMessageModel.swift in Sources */,
-				3DD17E9DE529C5B20F7528CDC7A26C09 /* ROCController.swift in Sources */,
+				3DD17E9DE529C5B20F7528CDC7A26C09 /* ROCBaseController.swift in Sources */,
 				E39CC7641E7C88D10073555E /* ROCTextMessageViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
