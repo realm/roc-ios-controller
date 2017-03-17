@@ -9,13 +9,9 @@
 Pod::Spec.new do |s|
   s.name             = 'ROCController'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of ROCController.'
+  s.summary          = 'Realm Object Chat Controller. A powerful Chatto controller backed by Realm!'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+Creating a chat app is insanely hard. Not only the UI but also the data layer. With Realm's fast database and change notification API, we can show blazing fast, 60fps chats that you can easily integrate into your own app.
 
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
@@ -37,6 +33,7 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'UIKit'
+  s.dependency 'Chatto', '~> 3.0.1'
+  s.dependency 'ChattoAdditions', '~> 3.0.1'
 end

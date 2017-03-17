@@ -1,0 +1,6 @@
+framework module Pods_ROCController_Tests {
+  umbrella header "Pods-ROCController_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
