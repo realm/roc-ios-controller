@@ -10,11 +10,14 @@
 		02E27DC9E2DF2BD9E86F95B2 /* Pods_ROCController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0FB577162A6235445EE2BA /* Pods_ROCController_Tests.framework */; };
 		03A0E08BB52F04F049F11ACE /* Pods_ROCController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F36C79ABCD485D771194A13 /* Pods_ROCController_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACD81AFB9204008FA782 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ChatViewController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		E3A917231E7C8F6400D4EE71 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A917221E7C8F6400D4EE71 /* ConversationsViewController.swift */; };
+		E3A917281E7C903200D4EE71 /* SampleChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A917271E7C903200D4EE71 /* SampleChatMessage.swift */; };
+		E3A9172A1E7C93E000D4EE71 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A917291E7C93E000D4EE71 /* Conversation.swift */; };
+		E3A9172C1E7C962700D4EE71 /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A9172B1E7C962700D4EE71 /* ConversationTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +35,7 @@
 		607FACD01AFB9204008FA782 /* ROCController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ROCController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* ROCController_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ROCController_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +50,9 @@
 		C674B8D90CEBA059199F635F /* Pods-ROCController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ROCController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ROCController_Example/Pods-ROCController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E0409C6444F690A5258736D8 /* Pods-ROCController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ROCController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ROCController_Tests/Pods-ROCController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3A917221E7C8F6400D4EE71 /* ConversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
+		E3A917271E7C903200D4EE71 /* SampleChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleChatMessage.swift; sourceTree = "<group>"; };
+		E3A917291E7C93E000D4EE71 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		E3A9172B1E7C962700D4EE71 /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,10 +167,29 @@
 		E3A917241E7C8F6A00D4EE71 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E3A917221E7C8F6400D4EE71 /* ConversationsViewController.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				E3A917251E7C8FF900D4EE71 /* Conversations */,
+				E3A917261E7C902200D4EE71 /* Chat */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E3A917251E7C8FF900D4EE71 /* Conversations */ = {
+			isa = PBXGroup;
+			children = (
+				E3A917221E7C8F6400D4EE71 /* ConversationsViewController.swift */,
+				E3A917291E7C93E000D4EE71 /* Conversation.swift */,
+				E3A9172B1E7C962700D4EE71 /* ConversationTableViewCell.swift */,
+			);
+			name = Conversations;
+			sourceTree = "<group>";
+		};
+		E3A917261E7C902200D4EE71 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD71AFB9204008FA782 /* ChatViewController.swift */,
+				E3A917271E7C903200D4EE71 /* SampleChatMessage.swift */,
+			);
+			name = Chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,7 +396,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3A917231E7C8F6400D4EE71 /* ConversationsViewController.swift in Sources */,
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				E3A917281E7C903200D4EE71 /* SampleChatMessage.swift in Sources */,
+				E3A9172C1E7C962700D4EE71 /* ConversationTableViewCell.swift in Sources */,
+				607FACD81AFB9204008FA782 /* ChatViewController.swift in Sources */,
+				E3A9172A1E7C93E000D4EE71 /* Conversation.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

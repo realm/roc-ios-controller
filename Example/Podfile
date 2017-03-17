@@ -2,6 +2,8 @@ use_frameworks!
 
 target 'ROCController_Example' do
   pod 'ROCController', :path => '../'
+  pod 'Fakery', '~> 2.0.0'
+  pod 'Kingfisher', '~> 3.5.2'
 
   target 'ROCController_Tests' do
     inherit! :search_paths

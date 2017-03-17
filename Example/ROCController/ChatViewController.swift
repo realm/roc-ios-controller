@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import ROCController
 
-class ViewController: UIViewController {
+class SampleChatController: ROCBaseController<SampleChatMessage> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
