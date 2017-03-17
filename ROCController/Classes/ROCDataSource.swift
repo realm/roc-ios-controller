@@ -26,6 +26,10 @@ open class ROCDataSource<T: ROCBaseChatMessage>: ChatDataSourceProtocol {
         
     }
     
+    public init(){
+        
+    }
+    
     open var token: NotificationToken?
     private var isFirstLoad: Bool = true
     

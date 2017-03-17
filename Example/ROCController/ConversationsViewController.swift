@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ROCController
 import RealmSwift
 
 class ConversationsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -46,7 +47,11 @@ class ConversationsViewController: UIViewController, UITableViewDataSource, UITa
         tableView.deselectRow(at: indexPath, animated: true)
         let realm = try! Realm()
         let results = realm.objects(SampleChatMessage.self).sorted(byKeyPath: "timestamp", ascending: true)
+        let dataSource = ROCDataSource<SampleChatMessage>()
+        dataSource.results = results
+        
         let chatViewController = SampleChatController()
+        
         navigationController?.pushViewController(chatViewController, animated: true)
     }
     
