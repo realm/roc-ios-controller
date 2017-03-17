@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol ROCMessageViewModelProtocol {
+public protocol ROCMessageViewModelProtocol {
     var messageModel: ROCMessageModelProtocol { get }
 }

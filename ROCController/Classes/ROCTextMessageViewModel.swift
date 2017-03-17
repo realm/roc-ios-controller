@@ -15,7 +15,7 @@ public class ROCTextMessageViewModel: TextMessageViewModel<ROCTextMessageModel>,
         super.init(textMessage: textMessage, messageViewModel: messageViewModel)
     }
     
-    var messageModel: ROCMessageModelProtocol {
+    public var messageModel: ROCMessageModelProtocol {
         return self.textMessage
     }
     

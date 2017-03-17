@@ -400,6 +400,8 @@
 		E39CC7621E7C88100073555E /* ROCMessageModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39CC7611E7C88100073555E /* ROCMessageModelProtocol.swift */; };
 		E39CC7641E7C88D10073555E /* ROCTextMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39CC7631E7C88D10073555E /* ROCTextMessageViewModel.swift */; };
 		E39CC7661E7C89220073555E /* ROCMessageViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39CC7651E7C89220073555E /* ROCMessageViewModelProtocol.swift */; };
+		E39CC7691E7C89E80073555E /* ROCTextMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39CC7681E7C89E80073555E /* ROCTextMessageHandler.swift */; };
+		E39CC76B1E7C8AA80073555E /* ROCBaseMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39CC76A1E7C8AA80073555E /* ROCBaseMessageHandler.swift */; };
 		E3F2AEED6DDEFC415DD5814F67424275 /* RLMSyncConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = B68915CD49BE4ACC06053497CC09A86F /* RLMSyncConfiguration.h */; };
 		E51054CAD0B235F24648D83CB7B3959E /* CollectionChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB0FFB13B6CF84B6EF29BA4CE2D3794 /* CollectionChanges.swift */; };
 		E53499E82C8C5F9A6BD2593CF1D9AF95 /* RealmSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEDB632256D7CD9D5BF0C34C86B79AE /* RealmSwift-dummy.m */; };
@@ -1041,6 +1043,8 @@
 		E39CC7611E7C88100073555E /* ROCMessageModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROCMessageModelProtocol.swift; sourceTree = "<group>"; };
 		E39CC7631E7C88D10073555E /* ROCTextMessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROCTextMessageViewModel.swift; sourceTree = "<group>"; };
 		E39CC7651E7C89220073555E /* ROCMessageViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROCMessageViewModelProtocol.swift; sourceTree = "<group>"; };
+		E39CC7681E7C89E80073555E /* ROCTextMessageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROCTextMessageHandler.swift; sourceTree = "<group>"; };
+		E39CC76A1E7C8AA80073555E /* ROCBaseMessageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROCBaseMessageHandler.swift; sourceTree = "<group>"; };
 		E4ADE7C1B68B137B98E2AB047CEC6F52 /* ChatInputItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChatInputItem.swift; path = ChattoAdditions/Source/Input/ChatInputItem.swift; sourceTree = "<group>"; };
 		E546823C69B7759043BF3BA2E852DFE2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		E69F091591DE9661F5695BC350FA0C02 /* mach_excServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mach_excServer.h; path = Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/mach_excServer.h; sourceTree = "<group>"; };
@@ -1240,6 +1244,7 @@
 				E33941231E7C7AEC005DF69B /* ROCBaseChatMessage.swift */,
 				E39CC7611E7C88100073555E /* ROCMessageModelProtocol.swift */,
 				E39CC7651E7C89220073555E /* ROCMessageViewModelProtocol.swift */,
+				E39CC76A1E7C8AA80073555E /* ROCBaseMessageHandler.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1854,6 +1859,7 @@
 			children = (
 				E39CC75D1E7C83A80073555E /* ROCTextMessageModel.swift */,
 				E39CC7631E7C88D10073555E /* ROCTextMessageViewModel.swift */,
+				E39CC7681E7C89E80073555E /* ROCTextMessageHandler.swift */,
 			);
 			name = TextMessages;
 			sourceTree = "<group>";
@@ -2662,7 +2668,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E39CC7691E7C89E80073555E /* ROCTextMessageHandler.swift in Sources */,
 				E39CC7621E7C88100073555E /* ROCMessageModelProtocol.swift in Sources */,
+				E39CC76B1E7C8AA80073555E /* ROCBaseMessageHandler.swift in Sources */,
 				E39CC7661E7C89220073555E /* ROCMessageViewModelProtocol.swift in Sources */,
 				E33941241E7C7AEC005DF69B /* ROCBaseChatMessage.swift in Sources */,
 				E33941221E7C79FC005DF69B /* ROCDataSource.swift in Sources */,
