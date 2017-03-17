@@ -397,6 +397,9 @@
 		E34ACE3283F893660E4EDDAAB65562A0 /* RLMSyncPermissionChange_Private.h in Copy . Private Headers */ = {isa = PBXBuildFile; fileRef = 4962006C6B7BBC70FBC267A41592ADC5 /* RLMSyncPermissionChange_Private.h */; };
 		E381935E187069083ACC074711521B79 /* Realm.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CB3489FC14DD1F7039D1C2B4D6189FF /* Realm.h */; };
 		E39CC75E1E7C83A80073555E /* ROCTextMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39CC75D1E7C83A80073555E /* ROCTextMessageModel.swift */; };
+		E39CC7621E7C88100073555E /* ROCMessageModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39CC7611E7C88100073555E /* ROCMessageModelProtocol.swift */; };
+		E39CC7641E7C88D10073555E /* ROCTextMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39CC7631E7C88D10073555E /* ROCTextMessageViewModel.swift */; };
+		E39CC7661E7C89220073555E /* ROCMessageViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39CC7651E7C89220073555E /* ROCMessageViewModelProtocol.swift */; };
 		E3F2AEED6DDEFC415DD5814F67424275 /* RLMSyncConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = B68915CD49BE4ACC06053497CC09A86F /* RLMSyncConfiguration.h */; };
 		E51054CAD0B235F24648D83CB7B3959E /* CollectionChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB0FFB13B6CF84B6EF29BA4CE2D3794 /* CollectionChanges.swift */; };
 		E53499E82C8C5F9A6BD2593CF1D9AF95 /* RealmSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEDB632256D7CD9D5BF0C34C86B79AE /* RealmSwift-dummy.m */; };
@@ -1035,6 +1038,9 @@
 		E33941231E7C7AEC005DF69B /* ROCBaseChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROCBaseChatMessage.swift; sourceTree = "<group>"; };
 		E347AFA47EAC5A36B0FB4BCD1F613123 /* QuickConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickConfiguration.m; path = Sources/QuickObjectiveC/Configuration/QuickConfiguration.m; sourceTree = "<group>"; };
 		E39CC75D1E7C83A80073555E /* ROCTextMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROCTextMessageModel.swift; sourceTree = "<group>"; };
+		E39CC7611E7C88100073555E /* ROCMessageModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROCMessageModelProtocol.swift; sourceTree = "<group>"; };
+		E39CC7631E7C88D10073555E /* ROCTextMessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROCTextMessageViewModel.swift; sourceTree = "<group>"; };
+		E39CC7651E7C89220073555E /* ROCMessageViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROCMessageViewModelProtocol.swift; sourceTree = "<group>"; };
 		E4ADE7C1B68B137B98E2AB047CEC6F52 /* ChatInputItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChatInputItem.swift; path = ChattoAdditions/Source/Input/ChatInputItem.swift; sourceTree = "<group>"; };
 		E546823C69B7759043BF3BA2E852DFE2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		E69F091591DE9661F5695BC350FA0C02 /* mach_excServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mach_excServer.h; path = Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/mach_excServer.h; sourceTree = "<group>"; };
@@ -1232,6 +1238,8 @@
 				5321C6F29C1643486EB33E1BC22AF96E /* ROCController.swift */,
 				E33941211E7C79FC005DF69B /* ROCDataSource.swift */,
 				E33941231E7C7AEC005DF69B /* ROCBaseChatMessage.swift */,
+				E39CC7611E7C88100073555E /* ROCMessageModelProtocol.swift */,
+				E39CC7651E7C89220073555E /* ROCMessageViewModelProtocol.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1845,6 +1853,7 @@
 			isa = PBXGroup;
 			children = (
 				E39CC75D1E7C83A80073555E /* ROCTextMessageModel.swift */,
+				E39CC7631E7C88D10073555E /* ROCTextMessageViewModel.swift */,
 			);
 			name = TextMessages;
 			sourceTree = "<group>";
@@ -2653,11 +2662,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E39CC7621E7C88100073555E /* ROCMessageModelProtocol.swift in Sources */,
+				E39CC7661E7C89220073555E /* ROCMessageViewModelProtocol.swift in Sources */,
 				E33941241E7C7AEC005DF69B /* ROCBaseChatMessage.swift in Sources */,
 				E33941221E7C79FC005DF69B /* ROCDataSource.swift in Sources */,
 				989A614ADE2BCE6E1C9B6ADFD41B2BCB /* ROCController-dummy.m in Sources */,
 				E39CC75E1E7C83A80073555E /* ROCTextMessageModel.swift in Sources */,
 				3DD17E9DE529C5B20F7528CDC7A26C09 /* ROCController.swift in Sources */,
+				E39CC7641E7C88D10073555E /* ROCTextMessageViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

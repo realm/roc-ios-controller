@@ -10,7 +10,7 @@ import Foundation
 import ChattoAdditions
 
 open class ROCTextMessageModel: TextMessageModel<MessageModel>, ROCMessageModelProtocol {
-    open override init(messageModel: MessageModel, text: String) {
+    public override init(messageModel: MessageModel, text: String) {
         super.init(messageModel: messageModel, text: text)
     }
     

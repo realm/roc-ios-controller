@@ -9,11 +9,12 @@
 import Foundation
 import RealmSwift
 import Chatto
+import ChattoAdditions
 
 open class ROCBaseChatMessage: Object {
     
     public dynamic var chatMessageId: String = UUID().uuidString
-    public dynamic var timestamp: NSDate = NSDate()
+    public dynamic var timestamp: Date = Date()
     public dynamic var userId: String = UUID().uuidString
     
     public dynamic var text: String = ""
@@ -28,4 +29,38 @@ open class ROCBaseChatMessage: Object {
         return ["timestamp"]
     }
 
+}
+
+extension ROCBaseChatMessage: ROCMessageModelProtocol {
+    
+    public var uid: String {
+        return chatMessageId
+    }
+    
+    public var type: ChatItemType {
+        return mimeType
+    }
+    
+    public var date: Date {
+        return timestamp as Date
+    }
+    
+    public var senderId: String {
+        return userId
+    }
+    
+    open var isIncoming : Bool {
+        return true
+    }
+    
+    // Realm will aggressively try to send it over, this is out of our control
+    public var status: MessageStatus {
+        get {
+            return .success
+        }
+        set {
+            
+        }
+    }
+    
 }
