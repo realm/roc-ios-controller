@@ -13,7 +13,7 @@ protocol ROCInputViewDelegate : class {
     func attachmentButtonDidTapped()
 }
 
-class ROCInputView : UIView, UITextViewDelegate {
+public class ROCInputView : UIView, UITextViewDelegate {
     
     weak var delegate : ROCInputViewDelegate?
     
@@ -21,26 +21,25 @@ class ROCInputView : UIView, UITextViewDelegate {
         let textView = UITextView()
         textView.textContainerInset = UIEdgeInsets(top: 8, left: 10, bottom: 8, right: 40)
         textView.isScrollEnabled = false
-        textView.layer.borderColor = ROCConstants.Colors.silver.cgColor
+        textView.layer.borderColor = UIColor.lightGray.cgColor
         textView.layer.borderWidth = 1.0
         textView.layer.cornerRadius = 36 / 2
         textView.layer.masksToBounds = true
         textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.font = ROCConstants.Fonts.regularFont
         return textView
     }()
     
     lazy var topBorder : UIView = {
         let view = UIView()
-        view.backgroundColor = ROCConstants.Colors.silver
+        view.backgroundColor = UIColor.lightGray
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     lazy var attachmentButton : UIButton = {
         let button = UIButton()
-        button.tintColor = ROCConstants.Colors.primaryColor
-        let image = ROCConstants.Images.attachIcon
+        button.tintColor = UIColor.lightGray
+        let image = UIImage(named: "attach_icon")?.withRenderingMode(.alwaysTemplate)
         button.setImage(image, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -50,8 +49,8 @@ class ROCInputView : UIView, UITextViewDelegate {
         let button = UIButton()
         button.layer.cornerRadius = 28 / 2
         button.layer.masksToBounds = true
-        button.backgroundColor = ROCConstants.Colors.primaryColor
-        let image = ROCConstants.Images.sendIcon
+        button.backgroundColor = UIColor.blue
+        let image = UIImage(named: "send_icon")?.withRenderingMode(.alwaysTemplate)
         button.setImage(image, for: .normal)
         button.tintColor = .white
         button.imageView?.contentMode = .scaleAspectFit
@@ -64,7 +63,7 @@ class ROCInputView : UIView, UITextViewDelegate {
     init(){
         super.init(frame: CGRect.zero)
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = ROCConstants.Colors.clouds
+        backgroundColor = UIColor.lightGray
         
         addSubview(textView)
         addSubview(attachmentButton)
@@ -106,7 +105,7 @@ class ROCInputView : UIView, UITextViewDelegate {
         
     }
     
-    func textViewDidChange(_ textView: UITextView) {
+    public func textViewDidChange(_ textView: UITextView) {
         evaluateSendButtonAlpha()
     }
     
@@ -128,12 +127,12 @@ class ROCInputView : UIView, UITextViewDelegate {
         delegate?.attachmentButtonDidTapped()
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         self.updateConstraints() // Interface rotation or size class changes will reset constraints as defined in interface builder -> constraintsForVisibleTextView will be activated
         super.layoutSubviews()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

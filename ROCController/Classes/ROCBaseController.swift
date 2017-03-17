@@ -19,7 +19,7 @@ open class ROCBaseController<T: ROCBaseChatMessage>: BaseChatViewController {
             self.dataSource.reload()
         }
     }
-    
+    let messageHandler = ROCBaseMessageHandler()
     
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ open class ROCBaseController<T: ROCBaseChatMessage>: BaseChatViewController {
     }
     
     open override func createChatInputView() -> UIView {
-        return ROCChatInputView()
+        return ROCInputView()
     }
     
     open override func createCollectionViewLayout() -> UICollectionViewLayout {
@@ -39,17 +39,11 @@ open class ROCBaseController<T: ROCBaseChatMessage>: BaseChatViewController {
     
     open override func createPresenterBuilders() -> [ChatItemType : [ChatItemPresenterBuilderProtocol]] {
         let textMessagePresenter = TextMessagePresenterBuilder(
-            viewModelBuilder: RChatTextMessageViewModelBuilder(),
-            interactionHandler: RChatTextMessageHandler(baseHandler: self.messageHandler)
+            viewModelBuilder: ROCTextMessageViewModelBuilder(),
+            interactionHandler: ROCTextMessageHandler(baseHandler: self.messageHandler)
         )
-        textMessagePresenter.baseMessageStyle = {
-            let style = RChatMessageCollectionViewCellAvatarStyle()
-            return style
-        }()
-        textMessagePresenter.textCellStyle = RChatTextMessageCollectionViewCellStyle()
         return [
-            MimeType.textPlain.rawValue: [textMessagePresenter],
-            TimeSeparatorModel.chatItemType: [TimeSeparatorPresenterBuilder()]
+            "text/plain": [textMessagePresenter]
         ]
     }
     
