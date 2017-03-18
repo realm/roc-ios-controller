@@ -8,6 +8,7 @@
 
 import Foundation
 import Chatto
+import Realm
 import RealmSwift
 
 open class ROCDataSource<T: ROCBaseChatMessage>: ChatDataSourceProtocol {
@@ -26,30 +27,42 @@ open class ROCDataSource<T: ROCBaseChatMessage>: ChatDataSourceProtocol {
         
     }
     
-    public init(){
-        
+    
+    private var _token: NotificationToken?
+    public var results: Results<T> {
+        return _results
+    }
+    private var _results: Results<T>
+    
+    public init(results: Results<T>){
+        self._results = results
     }
     
-    open var token: NotificationToken?
-    private var isFirstLoad: Bool = true
-    
-    open var results: Results<T>? {
-        didSet {
-            self.token?.stop()
-            self.delegate?.chatDataSourceDidUpdate(self, updateType: .reload)
-            self.isFirstLoad = true
-            self.results?.addNotificationBlock({ [weak self] (changes) in
-                guard let `self` = self else { return }
-                
-            })
-        }
+    public func observe(){
+        self._token?.stop()
+        self.delegate?.chatDataSourceDidUpdate(self, updateType: .reload)
+        self._token = self._results.addNotificationBlock({ [weak self] (changes) in
+            guard let `self` = self else { return }
+            var chatItems = [ChatItemProtocol]()
+            for r in self.results {
+                let copy = T(value: r, schema: RLMSchema.partialShared())
+                let textMessageModel = ROCTextMessageModel(messageModel: copy, text: copy.text)
+                chatItems.append(textMessageModel)
+            }
+            self.chatItems = chatItems
+            self.delegate?.chatDataSourceDidUpdate(self)
+        })
     }
     
     public func reload(){
         self.delegate?.chatDataSourceDidUpdate(self, updateType: .reload)
     }
     
+    public func stop(){
+        _token?.stop()
+    }
+    
     deinit {
-        token?.stop()
+        _token?.stop()
     }
 }

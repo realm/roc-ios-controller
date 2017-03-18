@@ -7,8 +7,13 @@
 //
 
 import Foundation
+import RealmSwift
 import ROCController
 
 class SampleChatMessage: ROCBaseChatMessage {
+    
+    override var isIncoming: Bool {    
+        return userId != "max"
+    }
     
 }

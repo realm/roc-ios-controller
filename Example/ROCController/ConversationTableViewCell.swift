@@ -12,7 +12,7 @@ import Kingfisher
 class ConversationTableViewCell: UITableViewCell {
     
     static let REUSE_ID = "ConversationTableViewCell"
-    static let HEIGHT: CGFloat = 60.0
+    static let HEIGHT: CGFloat = 80
     
     lazy var userImageView: UIImageView = {
         let i = UIImageView()

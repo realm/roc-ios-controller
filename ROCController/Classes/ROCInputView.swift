@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ROCInputViewDelegate : class {
+public protocol ROCInputViewDelegate : class {
     func sendMessage(text: String)
     func attachmentButtonDidTapped()
 }

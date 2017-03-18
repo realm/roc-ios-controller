@@ -28,7 +28,7 @@ open class ROCBaseChatMessage: Object {
     override open static func indexedProperties() -> [String] {
         return ["timestamp"]
     }
-
+    
 }
 
 extension ROCBaseChatMessage: ROCMessageModelProtocol {

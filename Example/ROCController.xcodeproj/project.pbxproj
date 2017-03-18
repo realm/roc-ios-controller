@@ -10,7 +10,7 @@
 		02E27DC9E2DF2BD9E86F95B2 /* Pods_ROCController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0FB577162A6235445EE2BA /* Pods_ROCController_Tests.framework */; };
 		03A0E08BB52F04F049F11ACE /* Pods_ROCController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F36C79ABCD485D771194A13 /* Pods_ROCController_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ChatViewController.swift */; };
+		607FACD81AFB9204008FA782 /* SampleChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* SampleChatController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
@@ -35,7 +35,7 @@
 		607FACD01AFB9204008FA782 /* ROCController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ROCController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* SampleChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleChatController.swift; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* ROCController_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ROCController_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,7 +186,7 @@
 		E3A917261E7C902200D4EE71 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD71AFB9204008FA782 /* ChatViewController.swift */,
+				607FACD71AFB9204008FA782 /* SampleChatController.swift */,
 				E3A917271E7C903200D4EE71 /* SampleChatMessage.swift */,
 			);
 			name = Chat;
@@ -398,7 +398,7 @@
 				E3A917231E7C8F6400D4EE71 /* ConversationsViewController.swift in Sources */,
 				E3A917281E7C903200D4EE71 /* SampleChatMessage.swift in Sources */,
 				E3A9172C1E7C962700D4EE71 /* ConversationTableViewCell.swift in Sources */,
-				607FACD81AFB9204008FA782 /* ChatViewController.swift in Sources */,
+				607FACD81AFB9204008FA782 /* SampleChatController.swift in Sources */,
 				E3A9172A1E7C93E000D4EE71 /* Conversation.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);

@@ -32,11 +32,17 @@ class ConversationsViewController: UIViewController, UITableViewDataSource, UITa
         ]
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[tableView]-0-|", options: [], metrics: nil, views: views))
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[tableView]-0-|", options: [], metrics: nil, views: views))
+        
+        navigationItem.backBarButtonItem = nil
     }
     
     //UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return ConversationTableViewCell.HEIGHT
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,11 +53,7 @@ class ConversationsViewController: UIViewController, UITableViewDataSource, UITa
         tableView.deselectRow(at: indexPath, animated: true)
         let realm = try! Realm()
         let results = realm.objects(SampleChatMessage.self).sorted(byKeyPath: "timestamp", ascending: true)
-        let dataSource = ROCDataSource<SampleChatMessage>()
-        dataSource.results = results
-        
-        let chatViewController = SampleChatController()
-        
+        let chatViewController = SampleChatController(results: results)
         navigationController?.pushViewController(chatViewController, animated: true)
     }
     
