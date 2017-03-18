@@ -24,7 +24,7 @@ class SampleChatController: ROCBaseController<SampleChatMessage> {
         // Dispose of any resources that can be recreated.
     }
     
-    override func sendMessage(text: String) {
+    override func sendButtonDidTap(text: String) {
         let sampleChatMessage = SampleChatMessage()
         sampleChatMessage.userId = "max"
         sampleChatMessage.text = text

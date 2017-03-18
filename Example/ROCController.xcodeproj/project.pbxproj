@@ -18,6 +18,7 @@
 		E3A917281E7C903200D4EE71 /* SampleChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A917271E7C903200D4EE71 /* SampleChatMessage.swift */; };
 		E3A9172A1E7C93E000D4EE71 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A917291E7C93E000D4EE71 /* Conversation.swift */; };
 		E3A9172C1E7C962700D4EE71 /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A9172B1E7C962700D4EE71 /* ConversationTableViewCell.swift */; };
+		E3B131251E7D0EB700FABEE2 /* SampleAppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B131241E7D0EB700FABEE2 /* SampleAppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		E3A917271E7C903200D4EE71 /* SampleChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleChatMessage.swift; sourceTree = "<group>"; };
 		E3A917291E7C93E000D4EE71 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		E3A9172B1E7C962700D4EE71 /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
+		E3B131241E7D0EB700FABEE2 /* SampleAppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleAppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				E3B131241E7D0EB700FABEE2 /* SampleAppConstants.swift */,
 				E3A917241E7C8F6A00D4EE71 /* ViewControllers */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -397,6 +400,7 @@
 			files = (
 				E3A917231E7C8F6400D4EE71 /* ConversationsViewController.swift in Sources */,
 				E3A917281E7C903200D4EE71 /* SampleChatMessage.swift in Sources */,
+				E3B131251E7D0EB700FABEE2 /* SampleAppConstants.swift in Sources */,
 				E3A9172C1E7C962700D4EE71 /* ConversationTableViewCell.swift in Sources */,
 				607FACD81AFB9204008FA782 /* SampleChatController.swift in Sources */,
 				E3A9172A1E7C93E000D4EE71 /* Conversation.swift in Sources */,

@@ -13,7 +13,7 @@ import ROCController
 class SampleChatMessage: ROCBaseChatMessage {
     
     override var isIncoming: Bool {    
-        return userId != "max"
+        return userId != SampleAppConstants.myUserId
     }
     
 }

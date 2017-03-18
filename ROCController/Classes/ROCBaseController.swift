@@ -56,8 +56,7 @@ open class ROCBaseController<T: ROCBaseChatMessage>: BaseChatViewController, ROC
     }
     
 
-    open func sendMessage(text: String) {
-        
+    open func sendButtonDidTap(text: String) {
     }
     
     open func attachmentButtonDidTapped() {

@@ -9,7 +9,7 @@
 import UIKit
 
 public protocol ROCInputViewDelegate : class {
-    func sendMessage(text: String)
+    func sendButtonDidTap(text: String)
     func attachmentButtonDidTapped()
 }
 
@@ -118,7 +118,7 @@ public class ROCInputView : UIView, UITextViewDelegate {
     }
     
     func sendButtonDidTap(){
-        delegate?.sendMessage(text: textView.text)
+        delegate?.sendButtonDidTap(text: textView.text)
         textView.text = ""
         evaluateSendButtonAlpha()
     }
