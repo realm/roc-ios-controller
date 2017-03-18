@@ -41,6 +41,7 @@ class ConversationsViewController: UIViewController, UITableViewDataSource, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "My Conversations"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         view.addSubview(tableView)
         let views: [String: UIView] = [
@@ -114,8 +115,7 @@ class ConversationsViewController: UIViewController, UITableViewDataSource, UITa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let conversation = conversations[indexPath.row]
-        let results = conversation.chatMessages.sorted(byKeyPath: "timestamp", ascending: true)
-        let chatViewController = SampleChatController(results: results)
+        let chatViewController = SampleChatController(conversation: conversation)
         navigationController?.pushViewController(chatViewController, animated: true)
     }
     

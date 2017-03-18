@@ -12,7 +12,18 @@ import RealmSwift
 
 class SampleChatController: ROCBaseController<SampleChatMessage> {
     
-
+    let conversation: Conversation
+    
+    init(conversation: Conversation){
+        self.conversation = conversation
+        let chatMessages = conversation.chatMessages.sorted(byKeyPath: "timestamp", ascending: true)
+        super.init(results: chatMessages)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Now Chatting"
@@ -26,11 +37,11 @@ class SampleChatController: ROCBaseController<SampleChatMessage> {
     
     override func sendButtonDidTap(text: String) {
         let sampleChatMessage = SampleChatMessage()
-        sampleChatMessage.userId = "max"
+        sampleChatMessage.userId = SampleAppConstants.myUserId
         sampleChatMessage.text = text
         let realm = try! Realm()
         try! realm.write {
-            realm.add(sampleChatMessage, update: true)
+            conversation.chatMessages.append(sampleChatMessage)
         }
     }
 

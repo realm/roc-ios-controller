@@ -15,7 +15,6 @@ open class ROCBaseController<T: ROCBaseChatMessage>: BaseChatViewController, ROC
     
     open var messageHandler = ROCBaseMessageHandler()
     
-    
     public init(results: Results<T>){
         super.init(nibName: nil, bundle: nil)
         self.chatDataSource = ROCDataSource<T>(results: results)
