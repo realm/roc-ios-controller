@@ -251,7 +251,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = A5KG55JAMM;
+						DevelopmentTeam = G47H383S4Y;
 						LastSwiftMigration = 0820;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -530,7 +530,7 @@
 			baseConfigurationReference = C674B8D90CEBA059199F635F /* Pods-ROCController_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = A5KG55JAMM;
+				DEVELOPMENT_TEAM = G47H383S4Y;
 				INFOPLIST_FILE = ROCController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -545,7 +545,7 @@
 			baseConfigurationReference = B14FAAC5762CA8C590AEA7EE /* Pods-ROCController_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = A5KG55JAMM;
+				DEVELOPMENT_TEAM = G47H383S4Y;
 				INFOPLIST_FILE = ROCController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;

@@ -15,20 +15,20 @@ Pod::Spec.new do |s|
 Creating a chat app is insanely hard. Not only the UI but also the data layer. With Realm's fast database and change notification API, we can show blazing fast, 60fps chats that you can easily integrate into your own app.
                        DESC
 
-  s.homepage         = 'https://github.com/mbalex99/ROCController'
+  s.homepage         = 'https://github.com/realm/roc-ios-controller'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'mbalex99' => 'mbalex99@gmail.com' }
   s.source           = { :git => 'https://github.com/mbalex99/ROCController.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/maxofeden
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'ROCController/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'ROCController' => ['ROCController/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'ROCController' => ['ROCController/Assets/*.png']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'

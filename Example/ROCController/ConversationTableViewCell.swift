@@ -16,12 +16,17 @@ class ConversationTableViewCell: UITableViewCell {
     
     lazy var userImageView: UIImageView = {
         let i = UIImageView()
+        i.layer.cornerRadius = 60 / 2
+        i.layer.masksToBounds = true
+        i.layer.borderColor = UIColor.lightGray.cgColor
+        i.layer.borderWidth = 1.0
         i.translatesAutoresizingMaskIntoConstraints = false
         return i
     }()
     
     lazy var nameLabel: UILabel = {
         let l = UILabel()
+        l.font = UIFont.boldSystemFont(ofSize: 16)
         l.lineBreakMode = .byTruncatingTail
         l.translatesAutoresizingMaskIntoConstraints = false
         return l
@@ -59,15 +64,15 @@ class ConversationTableViewCell: UITableViewCell {
         ]
         
         contentView.addConstraints(
-            NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[userImageView(40)]-8-[nameLabel]-8-[timeLabel]-16-|", options: [], metrics: nil, views: views)
+            NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[userImageView(60)]-8-[nameLabel]-8-[timeLabel]-16-|", options: [], metrics: nil, views: views)
         )
         
         contentView.addConstraints(
-            NSLayoutConstraint.constraints(withVisualFormat: "H:[userImageView(40)]-8-[summaryLabel]-16-|", options: [], metrics: nil, views: views)
+            NSLayoutConstraint.constraints(withVisualFormat: "H:[userImageView(60)]-8-[summaryLabel]-16-|", options: [], metrics: nil, views: views)
         )
         
         contentView.addConstraints(
-            NSLayoutConstraint.constraints(withVisualFormat: "V:|-8-[userImageView(40)]", options: [], metrics: nil, views: views)
+            NSLayoutConstraint.constraints(withVisualFormat: "V:|-8-[userImageView(60)]", options: [], metrics: nil, views: views)
         )
         
         contentView.addConstraints(
@@ -85,6 +90,12 @@ class ConversationTableViewCell: UITableViewCell {
     }
     
     func setupWithConversation(conversation: Conversation){
-        
+        if let imageUrl = conversation.imageUrl {
+            let url = URL(string: imageUrl)
+            userImageView.kf.setImage(with: url)
+        }
+        nameLabel.text = conversation.displayName
+        summaryLabel.text = conversation.summary
+        timeLabel.text = conversation.friendlyTimestampString
     }
 }
