@@ -6,10 +6,13 @@
 //  Copyright © 2017 CocoaPods. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct SampleAppConstants {
     
     static let myUserId = "max"
     
+    struct Colors {
+        static var primaryColor = UIColor(colorLiteralRed: 89/255, green: 86/255, blue: 158/255, alpha: 1.0)
+    }
 }
