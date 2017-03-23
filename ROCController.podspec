@@ -20,14 +20,13 @@ Creating a chat app is insanely hard. Not only the UI but also the data layer. W
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'mbalex99' => 'mbalex99@gmail.com' }
   s.source           = { :git => 'https://github.com/mbalex99/ROCController.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/maxofeden
+  s.social_media_url = 'https://twitter.com/maxofeden'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'ROCController/Classes/**/*'
-  
   s.resource_bundles = {
-    'ROCController' => ['ROCController/Assets/*.png']
+    'ROCController' => ['ROCController/Assets/Images.xcassets']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

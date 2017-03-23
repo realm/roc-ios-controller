@@ -26,6 +26,7 @@ public class ROCInputView : UIView, UITextViewDelegate {
         textView.layer.cornerRadius = 36 / 2
         textView.layer.masksToBounds = true
         textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.font = UIFont.systemFont(ofSize: 16)
         return textView
     }()
     
@@ -39,7 +40,7 @@ public class ROCInputView : UIView, UITextViewDelegate {
     lazy var attachmentButton : UIButton = {
         let button = UIButton()
         button.tintColor = UIColor.lightGray
-        let image = UIImage(named: "attach_icon")?.withRenderingMode(.alwaysTemplate)
+        let image = ROCInternalImageGetter.loadImage(name: "attach_icon")?.withRenderingMode(.alwaysTemplate)
         button.setImage(image, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -49,8 +50,8 @@ public class ROCInputView : UIView, UITextViewDelegate {
         let button = UIButton()
         button.layer.cornerRadius = 28 / 2
         button.layer.masksToBounds = true
-        button.backgroundColor = UIColor.blue
-        let image = UIImage(named: "send_icon")?.withRenderingMode(.alwaysTemplate)
+        button.backgroundColor = ROCConfig.Colors.blueColor
+        let image = ROCInternalImageGetter.loadImage(name: "send_icon")?.withRenderingMode(.alwaysTemplate)
         button.setImage(image, for: .normal)
         button.tintColor = .white
         button.imageView?.contentMode = .scaleAspectFit
@@ -63,7 +64,7 @@ public class ROCInputView : UIView, UITextViewDelegate {
     init(){
         super.init(frame: CGRect.zero)
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = UIColor.lightGray
+        backgroundColor = ROCConfig.Colors.lightGrayColor
         
         addSubview(textView)
         addSubview(attachmentButton)

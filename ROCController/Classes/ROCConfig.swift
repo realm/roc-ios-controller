@@ -6,4 +6,13 @@
 //
 //
 
-import Foundation
+import UIKit
+
+public struct ROCConfig {
+    
+    public struct Colors {
+        public static var blueColor = UIColor(string: "#59569e")
+        public static var lightGrayColor = UIColor(string: "#faf9f9")
+    }
+    
+}
