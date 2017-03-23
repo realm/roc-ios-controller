@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ROCController'
-  s.version          = '0.1.0'
+  s.version          = '0.0.1'
   s.summary          = 'Realm Object Chat Controller. A powerful Chatto controller backed by Realm!'
 
   s.description      = <<-DESC
@@ -19,7 +19,7 @@ Creating a chat app is insanely hard. Not only the UI but also the data layer. W
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'mbalex99' => 'mbalex99@gmail.com' }
-  s.source           = { :git => 'https://github.com/mbalex99/ROCController.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/realm/roc-ios-controller', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/maxofeden'
 
   s.ios.deployment_target = '8.0'
