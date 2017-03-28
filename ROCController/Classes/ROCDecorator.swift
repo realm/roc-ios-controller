@@ -44,10 +44,10 @@ final class ROCDecorator: ChatItemsDecoratorProtocol {
                 }
             
                 
-                /*if addTimeSeparator {
-                    let dateTimeStamp = DecoratedChatItem(chatItem: TimeSeparatorModel(uid: "\(currentMessage.uid)-time-separator", date: currentMessage.date.toWeekDayAndDateString()), decorationAttributes: nil)
+                if addTimeSeparator {
+                    let dateTimeStamp = DecoratedChatItem(chatItem: ROCTimeSeparatorModel(uid: "\(currentMessage.uid)-time-separator", date: currentMessage.date.toWeekDayAndDateString()), decorationAttributes: nil)
                     decoratedChatItems.append(dateTimeStamp)
-                }*/
+                }
             }
             
             decoratedChatItems.append(DecoratedChatItem(
