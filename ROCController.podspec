@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ROCController'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'Realm Object Chat Controller. A powerful Chatto controller backed by Realm!'
 
   s.description      = <<-DESC
