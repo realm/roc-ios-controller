@@ -24,7 +24,6 @@ open class ROCTimeSeparatorModel: ChatItemProtocol {
         self.date = date
         self.uid = uid
     }
-    
 }
 
 extension Date {

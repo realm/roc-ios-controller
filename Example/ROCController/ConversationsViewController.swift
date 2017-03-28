@@ -58,7 +58,11 @@ class ConversationsViewController: UIViewController, UITableViewDataSource, UITa
                 let conversation = Conversation()
                 conversation.conversationId = "\(i)"
                 conversation.displayName = "\(faker.name.firstName()) \(faker.name.lastName())"
-                conversation.imageUrl = faker.internet.image(width: 160, height: 160)
+                
+                let imageUrl = faker.internet.image(width: 160, height: 160)
+                let imageUrlWithRedundantQueryString = "\(imageUrl)?v=\(i)"
+                
+                conversation.imageUrl = imageUrlWithRedundantQueryString
                 conversation.summary = faker.lorem.sentence()
                 conversationsToAdd.append(conversation)
             }

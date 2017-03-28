@@ -92,7 +92,7 @@ class ConversationTableViewCell: UITableViewCell {
     func setupWithConversation(conversation: Conversation){
         if let imageUrl = conversation.imageUrl {
             let url = URL(string: imageUrl)
-            userImageView.kf.setImage(with: url)
+            userImageView.kf.setImage(with: url, options: [ .transition(.fade(0.2)) ])
         }
         nameLabel.text = conversation.displayName
         summaryLabel.text = conversation.summary
