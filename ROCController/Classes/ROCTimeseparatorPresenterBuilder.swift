@@ -9,7 +9,11 @@
 import UIKit
 import Chatto
 
-public class ROCTimeSeparatorPresenterBuilder: ChatItemPresenterBuilderProtocol {
+open class ROCTimeSeparatorPresenterBuilder: ChatItemPresenterBuilderProtocol {
+    
+    public init(){
+        
+    }
     
     public func canHandleChatItem(_ chatItem: ChatItemProtocol) -> Bool {
         return chatItem is ROCTimeSeparatorModel

@@ -16,7 +16,7 @@ open class ROCTimeSeparatorModel: ChatItemProtocol {
     public let type: String = ROCTimeSeparatorModel.chatItemType
     public let date: String
     
-    static var chatItemType: ChatItemType {
+    public static var chatItemType: ChatItemType {
         return "ROCTimeSeparatorModel"
     }
     

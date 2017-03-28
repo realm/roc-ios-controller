@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Chatto
 
-class ROCTimeSeparatorCollectionViewCell: UICollectionViewCell {
+open class ROCTimeSeparatorCollectionViewCell: UICollectionViewCell {
     
     private let label: UILabel = UILabel()
     
@@ -19,7 +19,7 @@ class ROCTimeSeparatorCollectionViewCell: UICollectionViewCell {
         self.commonInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.commonInit()
     }
@@ -44,7 +44,7 @@ class ROCTimeSeparatorCollectionViewCell: UICollectionViewCell {
         self.setNeedsLayout()
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         self.label.bounds.size = self.label.sizeThatFits(self.contentView.bounds.size)
         self.label.center = self.contentView.center
