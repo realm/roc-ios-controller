@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Chatto
 
-public class ROCTimeSeparatorModel: ChatItemProtocol {
+open class ROCTimeSeparatorModel: ChatItemProtocol {
     
     public let uid: String
     public let type: String = ROCTimeSeparatorModel.chatItemType
@@ -20,7 +20,7 @@ public class ROCTimeSeparatorModel: ChatItemProtocol {
         return "ROCTimeSeparatorModel"
     }
     
-    init(uid: String, date: String) {
+    public init(uid: String, date: String) {
         self.date = date
         self.uid = uid
     }
