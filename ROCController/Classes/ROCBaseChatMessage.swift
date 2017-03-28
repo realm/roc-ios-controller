@@ -16,6 +16,7 @@ open class ROCBaseChatMessage: Object {
     public dynamic var chatMessageId: String = UUID().uuidString
     public dynamic var timestamp: Date = Date()
     public dynamic var userId: String = UUID().uuidString
+    public dynamic var userDisplayName: String = ""
     
     public dynamic var text: String = ""
     public dynamic var mimeType: String = "text/plain"
@@ -53,14 +54,8 @@ extension ROCBaseChatMessage: ROCMessageModelProtocol {
         return true
     }
     
-    // Realm will aggressively try to send it over, this is out of our control
     public var status: MessageStatus {
-        get {
-            return .success
-        }
-        set {
-            
-        }
+        return .success
     }
     
 }

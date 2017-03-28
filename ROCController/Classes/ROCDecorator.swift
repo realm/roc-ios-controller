@@ -30,12 +30,16 @@ final class ROCDecorator: ChatItemsDecoratorProtocol {
             var additionalItems =  [DecoratedChatItem]()
             
             var addTimeSeparator = false
+            var addNameSeparator = false
+            
             if let currentMessage = chatItem as? MessageModelProtocol {
                 if let nextMessage = next as? MessageModelProtocol {
                     showsTail = currentMessage.senderId != nextMessage.senderId
                 } else {
                     showsTail = true
                 }
+                
+                addNameSeparator = showsTail
                 
                 if let previousMessage = prev as? MessageModelProtocol {
                     addTimeSeparator = !calendar.isDate(currentMessage.date, inSameDayAs: previousMessage.date)
@@ -47,6 +51,12 @@ final class ROCDecorator: ChatItemsDecoratorProtocol {
                 if addTimeSeparator {
                     let dateTimeStamp = DecoratedChatItem(chatItem: ROCTimeSeparatorModel(uid: "\(currentMessage.uid)-time-separator", date: currentMessage.date.toWeekDayAndDateString()), decorationAttributes: nil)
                     decoratedChatItems.append(dateTimeStamp)
+                }
+                
+                if addNameSeparator {
+                    let nameSeparatorModel = ROCNameSeparatorModel(uId: "\(currentMessage.uid)-name-seperator", name: currentMessage.senderId, isIncoming: currentMessage.isIncoming)
+                    let decorated = DecoratedChatItem(chatItem: nameSeparatorModel, decorationAttributes: nil)
+                    decoratedChatItems.append(decorated)
                 }
             }
             
@@ -65,9 +75,7 @@ final class ROCDecorator: ChatItemsDecoratorProtocol {
         guard let currentMessage = current as? MessageModelProtocol else { return Constants.normalSeparation }
         guard let nextMessage = nexItem as? MessageModelProtocol else { return Constants.normalSeparation }
         
-        if self.showsStatusForMessage(currentMessage) {
-            return 0
-        } else if currentMessage.senderId != nextMessage.senderId {
+        if currentMessage.senderId != nextMessage.senderId {
             return Constants.normalSeparation
         } else if nextMessage.date.timeIntervalSince(currentMessage.date) > Constants.timeIntervalThresholdToIncreaseSeparation {
             return Constants.normalSeparation
@@ -76,7 +84,4 @@ final class ROCDecorator: ChatItemsDecoratorProtocol {
         }
     }
     
-    func showsStatusForMessage(_ message: MessageModelProtocol) -> Bool {
-        return message.status == .failed || message.status == .sending
-    }
 }

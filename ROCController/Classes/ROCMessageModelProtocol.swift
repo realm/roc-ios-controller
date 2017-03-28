@@ -11,5 +11,5 @@ import ChattoAdditions
 
 
 public protocol ROCMessageModelProtocol: MessageModelProtocol {
-    var status: MessageStatus { get set }
+    var userDisplayName: String { get set }
 }

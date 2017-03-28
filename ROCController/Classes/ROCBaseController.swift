@@ -51,7 +51,8 @@ open class ROCBaseController<T: ROCBaseChatMessage>: BaseChatViewController, ROC
         textMessagePresenter.textCellStyle = ROCTextMessageCollectionViewCellStyle()
         return [
             "text/plain": [textMessagePresenter],
-            ROCTimeSeparatorModel.chatItemType: [ROCTimeSeparatorPresenterBuilder()]
+            ROCTimeSeparatorModel.chatItemType: [ROCTimeSeparatorPresenterBuilder()],
+            ROCNameSeparatorModel.chatItemType: [ROCNameSeparatorPresenterBuilder()]
         ]
     }
     

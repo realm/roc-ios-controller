@@ -16,7 +16,7 @@ public class ROCTextMessageViewModel: TextMessageViewModel<ROCTextMessageModel>,
     }
     
     public var messageModel: ROCMessageModelProtocol {
-        return self.textMessage
+        return self.textMessage as! ROCMessageModelProtocol
     }
     
 }
