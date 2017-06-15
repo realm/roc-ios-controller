@@ -28,8 +28,6 @@ open class ROCNameSeparatorCollectionViewCell: UICollectionViewCell {
         self.label.textAlignment = .center
         self.label.textColor = UIColor.gray
         self.contentView.addSubview(label)
-        backgroundColor = .red
-        contentView.backgroundColor = .blue
     }
     
     

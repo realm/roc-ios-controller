@@ -20,6 +20,10 @@ open class ROCBaseChatMessage: Object {
     
     public dynamic var text: String = ""
     public dynamic var mimeType: String = "text/plain"
+    
+    /**
+     * You can store JSON or any blob data here.
+     */
     public dynamic var binaryData: NSData? = nil
     
     override open static func primaryKey() -> String? {
