@@ -1,6 +1,6 @@
 PODS:
-  - Chatto (3.0.1)
-  - ChattoAdditions (3.0.1):
+  - Chatto (3.1.0)
+  - ChattoAdditions (3.1.0):
     - Chatto
   - Fakery (2.0.0)
   - FBSnapshotTestCase (2.1.4):
@@ -17,15 +17,15 @@ PODS:
     - Nimble
     - Quick
   - Quick (1.0.0)
-  - Realm (2.4.4):
-    - Realm/Headers (= 2.4.4)
-  - Realm/Headers (2.4.4)
-  - RealmSwift (2.4.4):
-    - Realm (= 2.4.4)
-  - ROCController (0.1.0):
-    - Chatto (~> 3.0.1)
-    - ChattoAdditions (~> 3.0.1)
-    - RealmSwift (~> 2.4.4)
+  - Realm (2.8.1):
+    - Realm/Headers (= 2.8.1)
+  - Realm/Headers (2.8.1)
+  - RealmSwift (2.8.1):
+    - Realm (= 2.8.1)
+  - ROCController (0.0.5):
+    - Chatto (~> 3.1.0)
+    - ChattoAdditions (~> 3.1.0)
+    - RealmSwift (~> 2.8.1)
 
 DEPENDENCIES:
   - Fakery (~> 2.0.0)
@@ -41,18 +41,18 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Chatto: 484273a793e06a33cef2f7e5b5b88a5a375df015
-  ChattoAdditions: efd743b47dbd063eac824cd4bd94756cbf503f70
+  Chatto: d959be2d284db62c713c68d7c39f2712ff902fa2
+  ChattoAdditions: 64cfe2d3414a65d2d6bc8a1c5704df491eec28b6
   Fakery: 97b99c23937d2e025d9135c75e2b17351ccd5031
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Kingfisher: 9950e382c500b6834ce004c7c4131c444e90c3a1
   Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
   Nimble-Snapshots: e743439f26c2fa99d8f7e0d7c01c99bcb40aa6f2
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
-  Realm: 5a280a1f5a9a3c267bebf4f41ee47911137703d7
-  RealmSwift: 0c02b9f2d4be4301c497ed10e53a0580584eb1dd
-  ROCController: 0800995686e42070dd925881e80339dca4130f1a
+  Realm: 2627602ad6818451f0cb8c2a6e072f7f10a5f360
+  RealmSwift: 4764ca7657f2193c256fb032c0b123926f70dbcd
+  ROCController: fbba19be128a612b937e76a4953c40a522d5e4d5
 
 PODFILE CHECKSUM: 4c87fc55e84a4636b146b3ae827594a7aa5bf1ad
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

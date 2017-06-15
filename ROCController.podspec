@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ROCController'
-  s.version          = '0.0.4'
+  s.version          = '0.0.5'
   s.summary          = 'Realm Object Chat Controller. A powerful Chatto controller backed by Realm!'
 
   s.description      = <<-DESC
@@ -31,7 +31,7 @@ Creating a chat app is insanely hard. Not only the UI but also the data layer. W
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  s.dependency 'RealmSwift', '~> 2.4.4'
-  s.dependency 'Chatto', '~> 3.0.1'
-  s.dependency 'ChattoAdditions', '~> 3.0.1'
+  s.dependency 'RealmSwift', '~> 2.8.1'
+  s.dependency 'Chatto', '~> 3.1.0'
+  s.dependency 'ChattoAdditions', '~> 3.1.0'
 end
