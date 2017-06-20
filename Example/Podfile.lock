@@ -2,6 +2,7 @@ PODS:
   - Chatto (3.1.0)
   - ChattoAdditions (3.1.0):
     - Chatto
+  - Eureka (3.0.0)
   - Fakery (2.0.0)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
@@ -28,6 +29,7 @@ PODS:
     - RealmSwift (~> 2.8.1)
 
 DEPENDENCIES:
+  - Eureka (~> 3.0.0)
   - Fakery (~> 2.0.0)
   - FBSnapshotTestCase (~> 2.1.4)
   - Kingfisher (~> 3.5.2)
@@ -43,6 +45,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Chatto: d959be2d284db62c713c68d7c39f2712ff902fa2
   ChattoAdditions: 64cfe2d3414a65d2d6bc8a1c5704df491eec28b6
+  Eureka: f36fd440c3ebb7bfea0a4fbe6f16a05f1cb35906
   Fakery: 97b99c23937d2e025d9135c75e2b17351ccd5031
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Kingfisher: 9950e382c500b6834ce004c7c4131c444e90c3a1
@@ -51,8 +54,8 @@ SPEC CHECKSUMS:
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
   Realm: 2627602ad6818451f0cb8c2a6e072f7f10a5f360
   RealmSwift: 4764ca7657f2193c256fb032c0b123926f70dbcd
-  ROCController: fbba19be128a612b937e76a4953c40a522d5e4d5
+  ROCController: 721d8ac3634ec80150943756c9a5df78815b1cb0
 
-PODFILE CHECKSUM: 4c87fc55e84a4636b146b3ae827594a7aa5bf1ad
+PODFILE CHECKSUM: 2ba749abd0d6cf66ce505cdecd5885d8315f6615
 
 COCOAPODS: 1.2.1

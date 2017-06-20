@@ -27,7 +27,7 @@ final class ROCDecorator: ChatItemsDecoratorProtocol {
             
             let bottomMargin = self.separationAfterItem(chatItem, next: next)
             var showsTail = false
-            var additionalItems =  [DecoratedChatItem]()
+            let additionalItems =  [DecoratedChatItem]()
             
             var addTimeSeparator = false
             var addNameSeparator = false

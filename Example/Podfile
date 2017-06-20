@@ -1,9 +1,11 @@
 use_frameworks!
+platform :ios, '10.0'
 
 target 'ROCController_Example' do
   pod 'ROCController', :path => '../'
   pod 'Fakery', '~> 2.0.0'
   pod 'Kingfisher', '~> 3.5.2'
+  pod 'Eureka', '~> 3.0.0'
 
   target 'ROCController_Tests' do
     inherit! :search_paths

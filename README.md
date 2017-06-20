@@ -23,8 +23,8 @@ pod "ROCController"
 ## Tutorial 
 
 1. Whenever you need ROCController just make sure you `import ROCController`
-2. If you need a special sort of ChatMessage, you can subclass `ROCBaseChatMessage`. But you're free to use it right out of the box
-3. Subclass `ROCBaseController<T: ROCBaseChatMessage>`
+2. If you need a special sort of ChatMessage, you can subclass `RealmChatMessage`. But you're free to use it right out of the box
+3. Subclass `ROCBaseController<T: RealmChatMessage>`
 4. Implement your own "send message". See `SampleChatController` how it overrides the "sendMessage 
 
 ## FAQ

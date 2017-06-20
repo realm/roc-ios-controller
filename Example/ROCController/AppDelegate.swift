@@ -17,12 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-    
-        
+
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.tintColor = SampleAppConstants.Colors.primaryColor //changes the tint color
-        window?.rootViewController = UINavigationController(rootViewController: ConversationsViewController())
+        
+        let navigationController = UINavigationController(rootViewController: WelcomeViewController())
+        navigationController.navigationBar.isOpaque = true
+        navigationController.navigationBar.isTranslucent = false
+        
+        window?.rootViewController = navigationController
         
         return true
     }
