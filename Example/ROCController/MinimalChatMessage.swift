@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 import ROCController
 
-class SampleChatMessage: ROCBaseChatMessage {
+class MinimalChatMessage: ROCBaseChatMessage {
     
     override var isIncoming: Bool {    
         return userId != SampleAppConstants.myUserId

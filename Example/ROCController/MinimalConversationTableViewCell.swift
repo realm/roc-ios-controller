@@ -9,9 +9,9 @@
 import UIKit
 import Kingfisher
 
-class ConversationTableViewCell: UITableViewCell {
+class MinimalConversationTableViewCell: UITableViewCell {
     
-    static let REUSE_ID = "ConversationTableViewCell"
+    static let REUSE_ID = "MinimalConversationTableViewCell"
     static let HEIGHT: CGFloat = 80
     
     lazy var userImageView: UIImageView = {
@@ -89,7 +89,7 @@ class ConversationTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupWithConversation(conversation: Conversation){
+    func setupWithConversation(conversation: MinimalConversation){
         if let imageUrl = conversation.imageUrl {
             let url = URL(string: imageUrl)
             userImageView.kf.setImage(with: url, options: [ .transition(.fade(0.2)) ])

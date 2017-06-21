@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.tintColor = SampleAppConstants.Colors.primaryColor //changes the tint color
         
-        let navigationController = UINavigationController(rootViewController: WelcomeViewController())
+        let firstController: UIViewController = SyncUser.current == nil ? WelcomeViewController() : ChatHomeViewController()
+        let navigationController = UINavigationController(rootViewController: firstController)
         navigationController.navigationBar.isOpaque = true
         navigationController.navigationBar.isTranslucent = false
         

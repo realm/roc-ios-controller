@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class Conversation: Object {
+class MinimalConversation: Object {
     
     dynamic var conversationId: String = UUID().uuidString
     dynamic var timestamp: Date = Date()
@@ -17,7 +17,7 @@ class Conversation: Object {
     dynamic var displayName: String = ""
     dynamic var imageUrl: String? = nil
     
-    let chatMessages = List<SampleChatMessage>()
+    let chatMessages = List<MinimalChatMessage>()
     
     override static func primaryKey() -> String? {
         return "conversationId"

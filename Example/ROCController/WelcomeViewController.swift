@@ -29,12 +29,12 @@ class WelcomeViewController: UIViewController, UITableViewDataSource, UITableVie
         title = "Realm Object Chat!"
         view.addSubview(tableView)
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[tableView]-0-|", options: [], metrics: nil, views: [
-                "tableView": tableView
+            "tableView": tableView
             ]))
         
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[tableView]-0-|", options: [], metrics: nil, views: [
             "tableView": tableView
-        ]))
+            ]))
         
     }
     
@@ -56,7 +56,7 @@ class WelcomeViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
         case 0:
-            let conversations = ConversationsViewController()
+            let conversations = MinimalConversationsViewController()
             navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             navigationController?.pushViewController(conversations, animated: true)
             break

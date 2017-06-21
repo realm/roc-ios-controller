@@ -33,12 +33,31 @@ class ChatHomeViewController: UITabBarController, RecipientSelectorViewControlle
         
         navigationItem.rightBarButtonItem = newBarButtonItem
         navigationItem.leftBarButtonItem = logoutBarButtonItem
-    
+        
         logoutBarButtonItem.target = self
         logoutBarButtonItem.action = #selector(ChatHomeViewController.attemptLogout)
         
         newBarButtonItem.target = self
         newBarButtonItem.action = #selector(ChatHomeViewController.presentRecipientSelector)
+        
+        
+        let conversationsViewController = ConversationsViewController()
+        conversationsViewController.tabBarItem.title = "Conversations"
+        
+        let directoryViewController = DirectoryViewController()
+        directoryViewController.tabBarItem.title = "Users"
+        
+        let profileEditViewController = ProfileEditViewController()
+        profileEditViewController.tabBarItem.title = "Profile"
+        
+        
+        
+        
+        setViewControllers([
+            conversationsViewController,
+            directoryViewController,
+            profileEditViewController
+        ], animated: false)
         
     }
     
@@ -48,7 +67,7 @@ class ChatHomeViewController: UITabBarController, RecipientSelectorViewControlle
         let navigationController = UINavigationController(rootViewController:recipientSelector)
         present(navigationController, animated: true, completion: nil)
     }
-
+    
     func attemptLogout(){
         let alert = UIAlertController(title: "Logout?", message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Yes, Logout", style: .destructive, handler: { [weak self] (_) in

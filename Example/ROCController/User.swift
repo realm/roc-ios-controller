@@ -49,4 +49,10 @@ class User : Object {
         return result
     }
     
+    static func getMe() -> User {
+        let realm = User.globalUsersRealm
+        let user = realm.object(ofType: User.self, forPrimaryKey: SyncUser.current!.identity)
+        return user!
+    }
+    
 }

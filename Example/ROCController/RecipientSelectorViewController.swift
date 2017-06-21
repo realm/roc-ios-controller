@@ -81,10 +81,10 @@ class RecipientSelectorViewController: UIViewController, TURecipientsBarDelegate
         navigationItem.leftBarButtonItem = cancelBarButtonItem
         
         cancelBarButtonItem.target = self
-        cancelBarButtonItem.action = #selector(RecipientSelectorViewController.cancel)
+        cancelBarButtonItem.action = #selector(RecipientSelectorViewController.cancelBarButtonDidTap)
         
         doneBarButtonItem.target = self
-        doneBarButtonItem.action = #selector(RecipientSelectorViewController.done)
+        doneBarButtonItem.action = #selector(RecipientSelectorViewController.doneBarButtonDidTap)
         
         recipientsBar.showsAddButton = false
         recipientsBar.recipientsBarDelegate = self
@@ -109,20 +109,14 @@ class RecipientSelectorViewController: UIViewController, TURecipientsBarDelegate
         navigationItem.rightBarButtonItem = isEnabled ? doneBarButtonItem : nil
     }
     
-    func cancel(){
+    func cancelBarButtonDidTap(){
         self.dismiss(animated: true, completion: nil)
     }
     
-    func done(){
-        var setOfUserIds = Set<String>(
-            (self.recipientsBar.recipients as! [UserRecipient]).map({ $0.user._id })
-        )
-        //make sure we include ourselves
-        setOfUserIds.insert(SyncUser.current!.identity!)
+    func doneBarButtonDidTap(){
         self.dismiss(animated: true) {
-            self.delegate?.didSelectUserIds(userIds: Array(setOfUserIds))
+            self.delegate?.didSelectUserIds(userIds: (self.recipientsBar.recipients as! [UserRecipient]).map({ $0.user._id }))
         }
-        
     }
     
     // TURecipientsBarDelegate
@@ -130,9 +124,10 @@ class RecipientSelectorViewController: UIViewController, TURecipientsBarDelegate
     func recipientsBar(_ recipientsBar: TURecipientsBar, textDidChange searchText: String?) {
         guard let searchText = searchText else {
             self.results = nil
+            tableView.reloadData()
             return
         }
-        self.results = User.searchForUsers(searchTerm: searchText)
+        self.results = searchText == "" ? nil : User.searchForUsers(searchTerm: searchText)
         tableView.reloadData()
     }
     

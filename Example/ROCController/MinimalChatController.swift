@@ -10,11 +10,11 @@ import UIKit
 import ROCController
 import RealmSwift
 
-class SampleChatController: ROCBaseController<SampleChatMessage> {
+class MinimalChatController: ROCBaseController<MinimalChatMessage> {
     
-    let conversation: Conversation
+    let conversation: MinimalConversation
     
-    init(conversation: Conversation){
+    init(conversation: MinimalConversation){
         self.conversation = conversation
         let chatMessages = conversation.chatMessages.sorted(byKeyPath: "timestamp", ascending: true)
         super.init(results: chatMessages)
@@ -36,7 +36,7 @@ class SampleChatController: ROCBaseController<SampleChatMessage> {
     }
     
     override func sendButtonDidTap(text: String) {
-        let sampleChatMessage = SampleChatMessage()
+        let sampleChatMessage = MinimalChatMessage()
         sampleChatMessage.userId = SampleAppConstants.myUserId
         sampleChatMessage.text = text
         let realm = try! Realm()
