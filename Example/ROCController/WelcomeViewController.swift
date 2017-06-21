@@ -13,7 +13,7 @@ class WelcomeViewController: UIViewController, UITableViewDataSource, UITableVie
     
     let options = [
         "Minimal Example",
-        "Realm Mobile Platform Example"
+        "Sync Example"
     ]
     
     lazy var tableView: UITableView = {

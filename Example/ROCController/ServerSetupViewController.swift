@@ -60,7 +60,7 @@ class ServerSetupViewController: FormViewController {
                 })
         
         form.setValues([
-            ServerSetupViewController.SERVER_URL: "http://45.55.173.122:9080",
+            ServerSetupViewController.SERVER_URL: "http://\(SampleAppConstants.syncRosHost):\(SampleAppConstants.syncRosPort)",
             ServerSetupViewController.USERNAME: UserDefaults.standard.cachedUsername
         ])
         
@@ -75,6 +75,7 @@ class ServerSetupViewController: FormViewController {
         SyncUser.logIn(with: creds, server: authUrl) { [weak self] (user, error) in
             DispatchQueue.main.async {
                 if let _ = user {
+                    User.upsertUserInfo(username: username, name: username, email: username)
                     self?.navigationController?.setViewControllers([ChatHomeViewController()], animated: true)
                 }else {
                     if isRegister == false {

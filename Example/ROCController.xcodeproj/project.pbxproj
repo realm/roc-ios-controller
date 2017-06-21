@@ -16,13 +16,15 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		E34B0DF21EF3210D0025ABAF /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B0DF11EF3210D0025ABAF /* UserDefaults+Extensions.swift */; };
 		E34B0DF51EF3218B0025ABAF /* ServerSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B0DF41EF3218B0025ABAF /* ServerSetupViewController.swift */; };
-		E34B0DF81EF326020025ABAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B0DF71EF326020025ABAF /* LoginViewController.swift */; };
 		E3A917231E7C8F6400D4EE71 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A917221E7C8F6400D4EE71 /* ConversationsViewController.swift */; };
 		E3A917281E7C903200D4EE71 /* SampleChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A917271E7C903200D4EE71 /* SampleChatMessage.swift */; };
 		E3A9172A1E7C93E000D4EE71 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A917291E7C93E000D4EE71 /* Conversation.swift */; };
 		E3A9172C1E7C962700D4EE71 /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A9172B1E7C962700D4EE71 /* ConversationTableViewCell.swift */; };
 		E3B131251E7D0EB700FABEE2 /* SampleAppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B131241E7D0EB700FABEE2 /* SampleAppConstants.swift */; };
 		E3C1210C1EF8529F008B6C30 /* ChatHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C1210B1EF8529F008B6C30 /* ChatHomeViewController.swift */; };
+		E3D38D7C1EF99E57008E428F /* RecipientSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D38D7B1EF99E57008E428F /* RecipientSelectorViewController.swift */; };
+		E3D38D7F1EFA0E2A008E428F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D38D7E1EFA0E2A008E428F /* User.swift */; };
+		E3D38D811EFAC1F0008E428F /* RecipientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D38D801EFAC1F0008E428F /* RecipientTableViewCell.swift */; };
 		E3EB0CBE1E80814000BBC021 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EB0CBD1E80814000BBC021 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,13 +59,15 @@
 		E0409C6444F690A5258736D8 /* Pods-ROCController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ROCController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ROCController_Tests/Pods-ROCController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E34B0DF11EF3210D0025ABAF /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		E34B0DF41EF3218B0025ABAF /* ServerSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerSetupViewController.swift; sourceTree = "<group>"; };
-		E34B0DF71EF326020025ABAF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E3A917221E7C8F6400D4EE71 /* ConversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
 		E3A917271E7C903200D4EE71 /* SampleChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleChatMessage.swift; sourceTree = "<group>"; };
 		E3A917291E7C93E000D4EE71 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		E3A9172B1E7C962700D4EE71 /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
 		E3B131241E7D0EB700FABEE2 /* SampleAppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleAppConstants.swift; sourceTree = "<group>"; };
 		E3C1210B1EF8529F008B6C30 /* ChatHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatHomeViewController.swift; sourceTree = "<group>"; };
+		E3D38D7B1EF99E57008E428F /* RecipientSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientSelectorViewController.swift; sourceTree = "<group>"; };
+		E3D38D7E1EFA0E2A008E428F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E3D38D801EFAC1F0008E428F /* RecipientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientTableViewCell.swift; sourceTree = "<group>"; };
 		E3EB0CBD1E80814000BBC021 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,24 +190,12 @@
 			name = ServerSetup;
 			sourceTree = "<group>";
 		};
-		E34B0DF61EF325F80025ABAF /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				E34B0DF71EF326020025ABAF /* LoginViewController.swift */,
-			);
-			name = Login;
-			sourceTree = "<group>";
-		};
 		E3A917241E7C8F6A00D4EE71 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E34B0DF61EF325F80025ABAF /* Login */,
-				E34B0DF31EF321770025ABAF /* ServerSetup */,
-				E3EB0CBF1E8095ED00BBC021 /* Minimal */,
+				E3D38D791EF99DBC008E428F /* Sync */,
+				E3A917261E7C902200D4EE71 /* Minimal */,
 				E3EB0CBC1E80813300BBC021 /* Welcome */,
-				E3A917251E7C8FF900D4EE71 /* Conversations */,
-				E3A917261E7C902200D4EE71 /* Chat */,
-				E3C1210D1EF95E20008B6C30 /* ChatHome */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -218,13 +210,14 @@
 			name = Conversations;
 			sourceTree = "<group>";
 		};
-		E3A917261E7C902200D4EE71 /* Chat */ = {
+		E3A917261E7C902200D4EE71 /* Minimal */ = {
 			isa = PBXGroup;
 			children = (
+				E3A917251E7C8FF900D4EE71 /* Conversations */,
 				607FACD71AFB9204008FA782 /* SampleChatController.swift */,
 				E3A917271E7C903200D4EE71 /* SampleChatMessage.swift */,
 			);
-			name = Chat;
+			name = Minimal;
 			sourceTree = "<group>";
 		};
 		E3C1210D1EF95E20008B6C30 /* ChatHome */ = {
@@ -235,19 +228,40 @@
 			name = ChatHome;
 			sourceTree = "<group>";
 		};
+		E3D38D791EF99DBC008E428F /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				E3D38D7D1EFA0E23008E428F /* Models */,
+				E3D38D7A1EF99E4A008E428F /* RecipientSelector */,
+				E3C1210D1EF95E20008B6C30 /* ChatHome */,
+				E34B0DF31EF321770025ABAF /* ServerSetup */,
+			);
+			name = Sync;
+			sourceTree = "<group>";
+		};
+		E3D38D7A1EF99E4A008E428F /* RecipientSelector */ = {
+			isa = PBXGroup;
+			children = (
+				E3D38D7B1EF99E57008E428F /* RecipientSelectorViewController.swift */,
+				E3D38D801EFAC1F0008E428F /* RecipientTableViewCell.swift */,
+			);
+			name = RecipientSelector;
+			sourceTree = "<group>";
+		};
+		E3D38D7D1EFA0E23008E428F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E3D38D7E1EFA0E2A008E428F /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		E3EB0CBC1E80813300BBC021 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
 				E3EB0CBD1E80814000BBC021 /* WelcomeViewController.swift */,
 			);
 			name = Welcome;
-			sourceTree = "<group>";
-		};
-		E3EB0CBF1E8095ED00BBC021 /* Minimal */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Minimal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,9 +467,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3D38D7F1EFA0E2A008E428F /* User.swift in Sources */,
 				E3A917231E7C8F6400D4EE71 /* ConversationsViewController.swift in Sources */,
 				E34B0DF51EF3218B0025ABAF /* ServerSetupViewController.swift in Sources */,
 				E34B0DF21EF3210D0025ABAF /* UserDefaults+Extensions.swift in Sources */,
+				E3D38D7C1EF99E57008E428F /* RecipientSelectorViewController.swift in Sources */,
+				E3D38D811EFAC1F0008E428F /* RecipientTableViewCell.swift in Sources */,
 				E3EB0CBE1E80814000BBC021 /* WelcomeViewController.swift in Sources */,
 				E3A917281E7C903200D4EE71 /* SampleChatMessage.swift in Sources */,
 				E3B131251E7D0EB700FABEE2 /* SampleAppConstants.swift in Sources */,
@@ -464,7 +481,6 @@
 				607FACD81AFB9204008FA782 /* SampleChatController.swift in Sources */,
 				E3A9172A1E7C93E000D4EE71 /* Conversation.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				E34B0DF81EF326020025ABAF /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

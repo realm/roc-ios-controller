@@ -6,6 +6,7 @@ target 'ROCController_Example' do
   pod 'Fakery', '~> 2.0.0'
   pod 'Kingfisher', '~> 3.5.2'
   pod 'Eureka', '~> 3.0.0'
+  pod 'TURecipientBar', '~> 2.0.4'
 
   target 'ROCController_Tests' do
     inherit! :search_paths

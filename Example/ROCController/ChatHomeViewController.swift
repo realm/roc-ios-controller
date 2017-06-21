@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class ChatHomeViewController: UIViewController {
+class ChatHomeViewController: UITabBarController, RecipientSelectorViewControllerDelegate {
     
     
     lazy var newBarButtonItem: UIBarButtonItem = {
@@ -37,6 +37,16 @@ class ChatHomeViewController: UIViewController {
         logoutBarButtonItem.target = self
         logoutBarButtonItem.action = #selector(ChatHomeViewController.attemptLogout)
         
+        newBarButtonItem.target = self
+        newBarButtonItem.action = #selector(ChatHomeViewController.presentRecipientSelector)
+        
+    }
+    
+    func presentRecipientSelector(){
+        let recipientSelector = RecipientSelectorViewController()
+        recipientSelector.delegate = self
+        let navigationController = UINavigationController(rootViewController:recipientSelector)
+        present(navigationController, animated: true, completion: nil)
     }
 
     func attemptLogout(){
@@ -50,5 +60,9 @@ class ChatHomeViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    // RecipientSelectorViewControllerDelegate
+    func didSelectUserIds(userIds: [String]) {
+        
+    }
     
 }

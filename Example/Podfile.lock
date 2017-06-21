@@ -27,6 +27,7 @@ PODS:
     - Chatto (~> 3.1.0)
     - ChattoAdditions (~> 3.1.0)
     - RealmSwift (~> 2.8.1)
+  - TURecipientBar (2.0.4)
 
 DEPENDENCIES:
   - Eureka (~> 3.0.0)
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - Nimble-Snapshots (~> 4.4.0)
   - Quick (~> 1.0.0)
   - ROCController (from `../`)
+  - TURecipientBar (~> 2.0.4)
 
 EXTERNAL SOURCES:
   ROCController:
@@ -55,7 +57,8 @@ SPEC CHECKSUMS:
   Realm: 2627602ad6818451f0cb8c2a6e072f7f10a5f360
   RealmSwift: 4764ca7657f2193c256fb032c0b123926f70dbcd
   ROCController: 721d8ac3634ec80150943756c9a5df78815b1cb0
+  TURecipientBar: 4904645f476ad056e17c9458fa9894552339e63a
 
-PODFILE CHECKSUM: 2ba749abd0d6cf66ce505cdecd5885d8315f6615
+PODFILE CHECKSUM: fc1abee63727b99898c91a0a5ef088fbe35b3ed5
 
 COCOAPODS: 1.2.1
