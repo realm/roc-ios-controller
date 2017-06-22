@@ -64,7 +64,6 @@ class DirectoryViewController: UIViewController, UITableViewDataSource, UITableV
                 break
             }
         }
-        
     }
     
     deinit {

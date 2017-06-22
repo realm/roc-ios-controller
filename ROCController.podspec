@@ -26,7 +26,7 @@ Creating a chat app is insanely hard. Not only the UI but also the data layer. W
 
   s.source_files = 'ROCController/Classes/**/*'
   s.resource_bundles = {
-    'ROCController' => ['ROCController/Assets/Images.xcassets']
+    'ROCController' => ['ROCController/Assets/**/*']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

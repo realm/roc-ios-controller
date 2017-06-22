@@ -32,6 +32,8 @@ final class ROCDecorator: ChatItemsDecoratorProtocol {
             var addTimeSeparator = false
             var addNameSeparator = false
             
+            var nameSeparator: DecoratedChatItem? = nil
+            
             if let currentMessage = chatItem as? MessageModelProtocol {
                 if let nextMessage = next as? MessageModelProtocol {
                     showsTail = currentMessage.senderId != nextMessage.senderId
@@ -53,10 +55,15 @@ final class ROCDecorator: ChatItemsDecoratorProtocol {
                     decoratedChatItems.append(dateTimeStamp)
                 }
                 
+                if let previousMessage = prev as? MessageModelProtocol {
+                    addNameSeparator = currentMessage.senderId != previousMessage.senderId
+                } else {
+                    addNameSeparator = false
+                }
+                
                 if addNameSeparator {
                     let nameSeparatorModel = ROCNameSeparatorModel(uId: "\(currentMessage.uid)-name-seperator", name: currentMessage.senderId, isIncoming: currentMessage.isIncoming)
-                    let decorated = DecoratedChatItem(chatItem: nameSeparatorModel, decorationAttributes: nil)
-                    decoratedChatItems.append(decorated)
+                    nameSeparator = DecoratedChatItem(chatItem: nameSeparatorModel, decorationAttributes: nil)
                 }
             }
             
@@ -65,6 +72,10 @@ final class ROCDecorator: ChatItemsDecoratorProtocol {
                 decorationAttributes: ChatItemDecorationAttributes(bottomMargin: bottomMargin, showsTail: showsTail, canShowAvatar: showsTail))
             )
             decoratedChatItems.append(contentsOf: additionalItems)
+            
+            if let nameSeparator = nameSeparator {
+                decoratedChatItems.append(nameSeparator)
+            }
         }
         
         return decoratedChatItems

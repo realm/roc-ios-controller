@@ -11,7 +11,7 @@ import RealmSwift
 import Chatto
 import ChattoAdditions
 
-open class ROCBaseChatMessage: Object {
+open class ROCChatMessage: Object {
     
     public dynamic var chatMessageId: String = UUID().uuidString
     public dynamic var timestamp: Date = Date()
@@ -36,7 +36,7 @@ open class ROCBaseChatMessage: Object {
     
 }
 
-extension ROCBaseChatMessage: ROCMessageModelProtocol {
+extension ROCChatMessage: ROCMessageModelProtocol {
     
     public var uid: String {
         return chatMessageId

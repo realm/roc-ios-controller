@@ -11,7 +11,7 @@ import Chatto
 import ChattoAdditions
 import RealmSwift
 
-open class ROCBaseController<T: ROCBaseChatMessage>: BaseChatViewController, ROCInputViewDelegate {
+open class ROCBaseController<T: ROCChatMessage>: BaseChatViewController, ROCInputViewDelegate {
     
     open var messageHandler = ROCBaseMessageHandler()
     

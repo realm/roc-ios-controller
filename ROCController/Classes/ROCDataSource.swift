@@ -11,7 +11,7 @@ import Chatto
 import Realm
 import RealmSwift
 
-open class ROCDataSource<T: ROCBaseChatMessage>: ChatDataSourceProtocol {
+open class ROCDataSource<T: ROCChatMessage>: ChatDataSourceProtocol {
     
     open var chatItems: [ChatItemProtocol] =  []
     open var hasMorePrevious: Bool = false
