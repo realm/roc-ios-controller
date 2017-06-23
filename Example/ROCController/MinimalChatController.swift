@@ -44,6 +44,18 @@ class MinimalChatController: ROCBaseController<MinimalChatMessage> {
             conversation.chatMessages.append(sampleChatMessage)
         }
     }
+    
+    override func attachmentButtonDidTapped() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "Take a Picture", style: .default, handler: { [weak self] (_) in
+            
+        }))
+        alertController.addAction(UIAlertAction(title: "Choose from Library", style: .default, handler: { [weak self] (_) in
+            
+        }))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alertController, animated: true, completion: nil)
+    }
 
 }
 
