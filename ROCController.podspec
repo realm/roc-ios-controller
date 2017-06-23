@@ -25,9 +25,7 @@ Creating a chat app is insanely hard. Not only the UI but also the data layer. W
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'ROCController/Classes/**/*'
-  s.resource_bundles = {
-    'ROCController' => ['ROCController/Assets/**/*']
-  }
+  s.resources = 'ROCController/Assets/*.xcassets'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
